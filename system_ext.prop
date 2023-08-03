@@ -39,6 +39,7 @@ persist.data.df.agg.dl_size=4096
 persist.vendor.data.mode=concurrent
 
 # Radio
+ro.telephony.sim_slots.count=2
 ril.subscription.types=NV,RUIM
 
 # Sensors
