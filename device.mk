@@ -318,7 +318,7 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-derp
+    $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
@@ -346,7 +346,7 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor
 
 # RemovePackages
-PRODUCT_PACKAGES += RemovePackages
+PRODUCT_PACKAGES += RemovePackagesGms
 
 # RIL
 PRODUCT_PACKAGES += \

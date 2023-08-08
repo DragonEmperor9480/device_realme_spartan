@@ -14,12 +14,6 @@ $(call inherit-product, device/realme/spartan/device.mk)
 # Inherit some common DerpFest stuff.
 $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
-# Rom Stuff
-DERP_BUILDTYPE := Official
-EXTRA_UDFPS_ANIMATIONS := true
-USE_LEGACY_BOOTANIMATION := true
-TARGET_NOT_USES_BLUR := true
-
 PRODUCT_NAME := derp_spartan
 PRODUCT_DEVICE := spartan
 PRODUCT_MANUFACTURER := realme
