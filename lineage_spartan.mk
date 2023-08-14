@@ -14,30 +14,11 @@ $(call inherit-product, device/realme/spartan/device.mk)
 # Inherit some common Alphadroid stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Device config
-TARGET_HAS_UDFPS := true
-TARGET_ENABLE_BLUR := true
-TARGET_EXCLUDES_AUDIOFX := false
-TARGET_FACE_UNLOCK_SUPPORTED := true
-
-# GAPPS config
-# 0 - NO GAPPS (default)
-# 1 - CORE GAPPS
-# 2 - FULL GAPPS
-WITH_GAPPS := 1
-
-# Use Google Telephony pack (Dialer, Contacts, Messaging) on GAPPS builds
-# Default = true
-TARGET_USE_GOOGLE_TELEPHONY := true
-
-# Debugging
-# Default = false
-TARGET_INCLUDE_MATLOG := false
-TARGET_DEFAULT_ADB_ENABLED := true
-
-# Maintainer
-ALPHA_BUILD_TYPE := Official
-ALPHA_MAINTAINER := Amrutesh
+#OS stuff
+WITH_GMS := true
+TARGET_SUPPORTS_QUICK_TAP := true
+RISING_MAINTAINER := Amrutesh
+RISING_CHIPSET := Snapdragon®870
 
 PRODUCT_NAME := lineage_spartan
 PRODUCT_DEVICE := spartan
