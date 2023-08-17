@@ -227,5 +227,8 @@ vendor.usb.rndis.func.name=gsi
 vendor.usb.use_ffs_mtp=0
 vendor.usb.use_gadget_hal=0
 
+# Vibrator
+persist.vendor.vib.gain=0x55
+
 # WiFi
 wifi.aware.interface=wifi-aware0

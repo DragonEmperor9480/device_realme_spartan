@@ -913,3 +913,7 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     ioprio rt 4
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
     onrestart restart audioserver
+
+  # Reduce default vibrator gain from 0x80 to 0x55,
+    # also allow gain customization via persistent property
+    write /sys/class/leds/vibrator/gain ${persist.vendor.vib.gain:-0x55}
