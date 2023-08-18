@@ -224,6 +224,9 @@ on boot
 
     # limit discard size to 128MB in order to avoid long IO latency
     write /sys/block/sda/queue/discard_max_bytes 134217728
+      # Reduce default vibrator gain from 0x80 to 0x55,
+    # also allow gain customization via persistent property
+    write /sys/class/leds/vibrator/gain ${persist.vendor.vib.gain:-0x55}
 
 # msm specific files that need to be created on /data
 on post-fs-data
@@ -914,6 +917,4 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
     onrestart restart audioserver
 
-  # Reduce default vibrator gain from 0x80 to 0x55,
-    # also allow gain customization via persistent property
-    write /sys/class/leds/vibrator/gain ${persist.vendor.vib.gain:-0x55}
+

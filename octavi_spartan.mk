@@ -22,10 +22,9 @@ TARGET_WANTS_FOD_ANIMATIONS := true
 TARGET_SUPPORTS_QUICK_TAP  := true
 OCTAVI_MAINTAINER := Amrutesh
 
-WITH_GMS = true
-ifeq ($(WITH_GMS, true))
-#rom side gapps flag if exists
-endif
+#Gapps
+WITH_GAPPS := true
+
 
 # Device conf
 PRODUCT_NAME := octavi_spartan
