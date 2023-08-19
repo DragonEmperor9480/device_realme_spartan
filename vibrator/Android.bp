@@ -2,7 +2,7 @@ Common_CFlags = ["-Wall"]
 Common_CFlags += ["-Werror"]
 
 cc_library_shared {
-    name: "vendor.qti.hardware.vibrator.impl.RMX1931",
+    name: "vendor.qti.hardware.vibrator.impl.spartan",
     stem: "vendor.qti.hardware.vibrator.impl",
     vendor: true,
     cflags: Common_CFlags,
@@ -15,13 +15,13 @@ cc_library_shared {
         "liblog",
         "libqtivibratoreffect",
         "libbinder_ndk",
-        "android.hardware.vibrator-V1-ndk",
+        "android.hardware.vibrator-V1-ndk_platform",
     ],
     export_include_dirs: ["include"]
 }
 
 cc_binary {
-    name: "vendor.qti.hardware.vibrator.service.RMX1931",
+    name: "vendor.qti.hardware.vibrator.service.spartan",
     stem: "vendor.qti.hardware.vibrator.service",
     vendor: true,
     relative_install_path: "hw",
@@ -38,7 +38,8 @@ cc_binary {
         "libutils",
         "libbase",
         "libbinder_ndk",
-        "android.hardware.vibrator-V1-ndk",
+        "android.hardware.vibrator-V1-ndk_platform",
         "vendor.qti.hardware.vibrator.impl",
     ],
 }
+
