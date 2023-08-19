@@ -4,6 +4,15 @@
      SPDX-License-Identifier: BSD-3-Clause
 -->
 <resources>
+     <!-- Default state for LiveDisplay -->
+    <bool name="config_liveDisplayAvailable">false</bool>
+
+    <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>
+
+    <!-- Burn-in protection -->
+    <bool name="config_statusBarBurnInProtection">true</bool>
+    <integer name="config_shift_interval">40</integer>
 
     <!-- Whether devices suports in-display fingerprint when screen is off -->
     <bool name="config_supportsScreenOffUdfps">true</bool>    
@@ -13,6 +22,7 @@
     
     <!-- Screen off UDFPS -->
     <bool name="config_supportScreenOffUdfps">true</bool>
+
 
   <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
@@ -47,4 +57,17 @@
         <item>100</item>
     </integer-array>
 
+    <!-- Enables or disables haptic effect when the text insertion/selection handle is moved
+         manually by the user. Off by default, since the expected haptic feedback may not be
+         available on some devices. -->
+    <bool name="config_enableHapticTextHandle">true</bool>
+
+      <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
+    <integer name="config_shutdownBatteryTemperature">600</integer>
+
+    <!-- Whether device has notification LED -->
+    <bool name="config_hasNotificationLed">false</bool>
+
+      <!-- the number of the max cached processes in the system. -->
+    <integer name="config_customizedMaxCachedProcesses">80</integer>
 </resources>
