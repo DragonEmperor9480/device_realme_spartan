@@ -17,21 +17,24 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Device config
 TARGET_HAS_UDFPS := true
 TARGET_ENABLE_BLUR := true
-TARGET_EXCLUDES_AUDIOFX := false
+TARGET_EXCLUDES_AUDIOFX := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
-# GAPPS config
-# 0 - NO GAPPS (default)
-# 1 - CORE GAPPS
-# 2 - FULL GAPPS
-WITH_GAPPS := 1
-
-# Use Google Telephony pack (Dialer, Contacts, Messaging) on GAPPS builds
-# Default = true
-TARGET_USE_GOOGLE_TELEPHONY := true
+# GAPPS
+WITH_GAPPS := true
+TARGET_INCLUDE_GOOGLE_APP := false
+TARGET_INCLUDE_GOOGLE_CALCULATOR := false
+TARGET_INCLUDE_GOOGLE_CALENDAR := false
+TARGET_INCLUDE_GOOGLE_CHROME := false
+TARGET_INCLUDE_GOOGLE_DESKCLOCK := false
+TARGET_INCLUDE_GOOGLE_DRIVE := false
+TARGET_INCLUDE_GMAIL := false
+TARGET_INCLUDE_GOOGLE_MAPS := false
+TARGET_INCLUDE_GOOGLE_PHOTOS := true
+# (NOT YET) TARGET_INCLUDE_GOOGLE_SETUP := false
+TARGET_INCLUDE_PIXEL_FRAMEWORK := false
 
 # Debugging
-# Default = false
 TARGET_INCLUDE_MATLOG := false
 TARGET_DEFAULT_ADB_ENABLED := true
 
